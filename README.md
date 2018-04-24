@@ -130,5 +130,5 @@ crontab –e
 * * * * *      cd /root/Sentinel-Demos/ && venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
 ```
 
-**Then hold down `ctrl and o` then hit `enter` then hold down `ctrl and hit x`**
-**That's it just wait a while and the WATCHDOG_EXPIRED status**
+*Then hold down `ctrl and o` then hit `enter` then hold down `ctrl and hit x`*
+*That's it just wait a while and the WATCHDOG_EXPIRED status*
