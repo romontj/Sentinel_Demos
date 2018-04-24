@@ -55,6 +55,9 @@ crontab –e
 *Then hold down `ctrl and o` then hit `enter`, then hold down `ctl` and hit x*
 
 *That' it just wait for a while and the WATCHDOG_EXPIRED status will disappear*
+
+
+
 ============================================================================================================
 
 
