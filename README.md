@@ -52,10 +52,13 @@ crontab –e
 * * * * *      cd /root/Sentinel-Demos/ && venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
 ```
 
-**Then hold down `ctrl and o` then hit `enter`, then hold down `ctl` and hit x**
+*Then hold down `ctrl and o` then hit `enter`, then hold down `ctl` and hit x*
 
-**That' it just wait for a while and the WATCHDOG_EXPIRED status will disappear**
+*That' it just wait for a while and the WATCHDOG_EXPIRED status will disappear*
 ============================================================================================================
+
+
+
 
 # If you used the new install method in the discord use this section!!
 
@@ -91,9 +94,9 @@ nano /root/.demos/demos.conf
 rpcport=5004
 ```
 
-**Then hold down `ctrl and o` then hit `enter` then hold down `ctrl and hit x`**
+*Then hold down `ctrl and o` then hit `enter` then hold down `ctrl and hit x`*
 
-# Now run the folloing lines on the VPS
+**Now run the folloing lines on the VPS**
 
 ```
 nano /root/Sentinel-Demos/sentinel.conf
