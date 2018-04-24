@@ -58,10 +58,6 @@ crontab –e
 
 
 
-============================================================================================================
-
-
-
 
 # If you used the new install method in the discord use this section!!
 
