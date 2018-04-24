@@ -56,8 +56,8 @@ crontab –e
 
 **That' it just wait for a while and the WATCHDOG_EXPIRED status will disappear**
 
-
-
+```
+```
 
 # If you used the new install method in the discord use this section!!
 
