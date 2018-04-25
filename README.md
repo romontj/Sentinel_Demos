@@ -28,31 +28,50 @@ virtualenv ./venv
 nano /root/.demoscore/demos.conf
 ```
 
-**Add the following line to the bottom of the file**
+**Check and make sure it like the conf below **
 ```
+rpcuser=username here (u can change to anything you want )
+rpcpassword=password here (u can change to anything u want )
+listen=1
+server=1
+daemon=1
+txindex=1
 rpcport=5004
+masternode=1
+logtimestamps=1
+masternodeprivkey=Your_Mn_Genkey(change this to your masternode genkey) 
+externalip=140.82.39.51:5005
+addnode=18.188.99.190
+addnode=18.188.220.201
+addnode=13.59.221.246
+addnode=52.15.63.29
 ```
 
 **Then hold down `ctrl + 0` then hit `enter` then  `ctrl + x`**
 
 **Now run the following line on the VPS**
 ```
-venv/bin/python bin/sentinel.py
+/home/demos-cli stop
 ```
+```
+/home/demosd -daemon
+```
+```
+cd /root/Sentinel-Demos/ && venv/bin/python bin/sentinel.py
+```
+
+**Wait for it to sync use `/home/demos-cli mnsync status` to make sure it fully synced and has "AssetName": "MASTERNODE_SYNC_FINISHED" **
 
 **After that run this command**
 ```
-crontab –e 
+crontab -e
 ```
 
-**Then hit enter to use nano**
-
-**At the end of the file add the following line **
 ```
-* * * * *      cd /root/Sentinel-Demos/ && venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+select `2`
 ```
 
-**Then hold down `ctrl and o` then hit `enter`, then hold down `ctl` and hit x**
+**Then hold down `ctrl and o` then hit `enter`, then hold down `ctl and hit x`**
 
 **That' it just wait for a while and the WATCHDOG_EXPIRED status will disappear**
 
@@ -88,47 +107,49 @@ virtualenv ./venv
 nano /root/.demos/demos.conf
 ```
 
-**Add the following to the bottom of the file**
+**Check and make sure it like the conf below **
 ```
+rpcuser=username here (u can change to anything you want )
+rpcpassword=password here (u can change to anything u want )
+listen=1
+server=1
+daemon=1
+txindex=1
 rpcport=5004
+masternode=1
+logtimestamps=1
+masternodeprivkey=Your_Mn_Genkey(change this to your masternode genkey) 
+externalip=140.82.39.51:5005
+addnode=18.188.99.190
+addnode=18.188.220.201
+addnode=13.59.221.246
+addnode=52.15.63.29
 ```
 
-*Then hold down `ctrl and o` then hit `enter` then hold down `ctrl and hit x`*
+**Then hold down `ctrl + 0` then hit `enter` then  `ctrl + x`**
 
-**Now run the folloing lines on the VPS**
-
+**Now run the following line on the VPS**
 ```
-nano /root/Sentinel-Demos/sentinel.conf
+/home/demos-cli stop
 ```
-
-**Change the 4th line to the follow **
-
 ```
-demos_conf=/root/.demos/demos.conf
+/home/demosd -daemon
 ```
-
-**Then hold down `cttl and o` then hit `enter` then hold down `ctrl and hit x`**
-
-**Run the following command**
-
 ```
-venv/bin/python bin/sentinel.py
+cd /root/Sentinel-Demos/ && venv/bin/python bin/sentinel.py
 ```
 
-**After that run the following command**
+**Wait for it to sync use `/home/demos-cli mnsync status` to make sure it fully synced and has "AssetName": "MASTERNODE_SYNC_FINISHED" **
 
+**After that run this command**
 ```
-crontab –e 
-```
-
-**Then hit enter to use nano**
-
-**At the end of the file add the following line**
-
-```
-* * * * *      cd /root/Sentinel-Demos/ && venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+crontab -e
 ```
 
-**Then hold down `ctrl and o` then hit `enter` then hold down `ctrl and hit x`**
+```
+select `2`
+```
 
-**That's it just wait a while and the WATCHDOG_EXPIRED status**
+**Then hold down `ctrl and o` then hit `enter`, then hold down `ctl and hit x`**
+
+**That' it just wait for a while and the WATCHDOG_EXPIRED status will disappear**
